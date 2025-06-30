@@ -13,8 +13,31 @@ body {
   width: 100%;
   max-width: 450px;
   padding: 20px;
+  text-align: center;
 }
 
+/* 🆕 logo styles */
+.login-logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 8px;
+  display: block;
+}
+
+.login-logo-link {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00aaff;
+  margin-bottom: 20px;
+}
+
+/* Card & form */
 .login-card {
   background-color: #ffffff;
   padding: 40px;
@@ -51,7 +74,7 @@ input[type="password"] {
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
-  box-sizing: border-box; /* ✅ Ensures eye icon doesn't overflow */
+  box-sizing: border-box;
 }
 
 input:focus {
@@ -59,21 +82,19 @@ input:focus {
   outline: none;
 }
 
-/* ===== Password Field with Eye Icon Fixes ===== */
 .password-wrapper {
   position: relative;
-  width: 100%;
 }
 
 .password-wrapper input {
-  padding-right: 40px; /* ✅ Space for eye icon */
+  padding-right: 40px;
 }
 
 .password-wrapper i {
   position: absolute;
   top: 50%;
   right: 14px;
-  transform: translateY(-50%); /* ✅ Perfect vertical centering */
+  transform: translateY(-50%);
   color: #aaa;
   cursor: pointer;
   font-size: 1.1rem;

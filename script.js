@@ -3,37 +3,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (unlockButton) {
     unlockButton.addEventListener('click', (e) => {
-      e.preventDefault(); // prevent page jump
-      showNotification("✨ Start unlocking your potential today!");
+      e.preventDefault(); // Stop form submission
+      showCenteredLoader("Redirecting to your DigiMitra Dashboard...");
     });
   }
 });
 
-// Non-blocking animated notification with mobile adjustments
-function showNotification(message) {
-  const notice = document.createElement('div');
-  notice.classList.add('notification-box');
-  notice.textContent = message;
+function showCenteredLoader(message) {
+  const overlay = document.createElement('div');
+  overlay.classList.add('loading-overlay');
 
-  Object.assign(notice.style, {
-    position: 'fixed',
-    bottom: '30px',
-    right: '30px',
-    background: '#00ffb3',
-    color: '#000',
-    padding: '12px 20px',
-    borderRadius: '10px',
-    boxShadow: '0 4px 20px rgba(0, 255, 179, 0.4)',
-    fontWeight: 'bold',
-    zIndex: '1000',
-    transition: 'opacity 0.5s ease',
-    maxWidth: 'calc(100% - 40px)',
-  });
+  const loaderBox = document.createElement('div');
+  loaderBox.classList.add('loader-box');
 
-  document.body.appendChild(notice);
+  const spinner = document.createElement('div');
+  spinner.classList.add('loading-spinner');
+
+  const text = document.createElement('p');
+  text.textContent = message;
+  text.classList.add('loading-text');
+
+  loaderBox.appendChild(spinner);
+  loaderBox.appendChild(text);
+  overlay.appendChild(loaderBox);
+  document.body.appendChild(overlay);
 
   setTimeout(() => {
-    notice.style.opacity = '0';
-    setTimeout(() => notice.remove(), 500);
-  }, 2500);
+    overlay.style.opacity = '0';
+    setTimeout(() => {
+      overlay.remove();
+      window.location.href = "dashboard.html";
+    }, 500);
+  }, 2000);
 }

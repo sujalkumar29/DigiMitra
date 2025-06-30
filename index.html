@@ -5,67 +5,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DigiMitra</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-
-  <!-- Navigation Bar -->
+  <!-- ========= NAVIGATION BAR ========= -->
   <nav class="navbar">
     <div class="nav-left">
-      <h1 class="site-title">DigiMitra</h1>
-      <span class="slogan">Panchayat's Digital Companion</span>
+      <!-- 🆕 logo image -->
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png.jpg" alt="DigiMitra logo" class="logo" />
+      </a>
+
+      <!-- Brand block: title + slogan -->
+      <div class="nav-branding">
+        <a href="index.html" class="site-title">
+          <h1>DigiMitra</h1>
+        </a>
+        <span class="slogan">Panchayat's Digital Companion</span>
+      </div>
     </div>
+
     <div class="nav-links">
-      <a href="dashboard.html" class="nav-button">Dashboard</a>
       <a href="login.html" class="nav-button">Sign In</a>
       <a href="signup.html" class="nav-button">Sign Up</a>
     </div>
   </nav>
-  <!-- Hero Section -->
+
+  <!-- ========= HERO SECTION ========= -->
   <section class="hero">
     <div class="hero-content">
       <h2>Empowering Panchayats Through Technology</h2>
-      <p>DigiMitra is your trusted companion for digital governance, local development, and community engagement. From
-        streamlined dashboards to citizen-centric features, we’re bringing digital India to the grassroots.</p>
+      <p>
+        DigiMitra is your trusted companion for digital governance, local
+        development and community engagement. From streamlined dashboards to
+        citizen-centric features, we’re bringing Digital India to the
+        grassroots.
+      </p>
       <a href="dashboard.html" class="cta-button">Explore Dashboard</a>
     </div>
   </section>
 
-  <!-- Feature Highlights -->
+  <!-- ========= FEATURE HIGHLIGHTS ========= -->
   <section class="features">
     <h3>What You Can Do with DigiMitra</h3>
+
     <div class="feature-grid">
       <div class="feature-card">
         <i class="fas fa-bullseye"></i>
         <h4>Track Schemes</h4>
-        <p>View ongoing government schemes, updates, and eligibility criteria in your panchayat.</p>
+        <p>View ongoing government schemes, updates and eligibility criteria
+          in your panchayat.</p>
       </div>
+
       <div class="feature-card">
         <i class="fas fa-users"></i>
         <h4>Community Engagement</h4>
-        <p>Participate in local governance with voting, suggestions, and community insights.</p>
+        <p>Participate in local governance with voting, suggestions and
+          community insights.</p>
       </div>
+
       <div class="feature-card">
         <i class="fas fa-chart-line"></i>
         <h4>Development Progress</h4>
-        <p>Get transparent insights into fund allocation and project completion in your area.</p>
+        <p>Get transparent insights into fund allocation and project
+          completion in your area.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ========= FOOTER ========= -->
   <footer class="digimitra-footer">
     <div class="footer-wrapper">
       <div class="footer-col">
         <h2>DigiMitra</h2>
-        <p>Your daily dose of discipline, direction, and digital growth — built for creators and dreamers.</p>
+        <p>Your daily dose of discipline, direction, and digital growth —
+          built for creators and dreamers.</p>
       </div>
+
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="#">Dashboard</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Motivation</a></li>
           <li><a href="#">Contact</a></li>
@@ -91,10 +117,9 @@
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <p>© 2025 DigiMitra | All rights reserved.</p>
-    </div>
+    <div class="footer-bottom">© 2025 DigiMitra | All rights reserved.</div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 

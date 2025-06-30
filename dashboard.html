@@ -1,28 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigiMitra – Dashboard</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard - Unlock Your Potential</title>
-  <link rel="stylesheet" href="dashboard.css" />
-</head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<body>
-  <div class="dashboard-container">
-    <h2>Welcome to Your Dashboard</h2>
-    <p class="subtext">Track your daily goals and stay motivated!</p>
+    <!-- Page stylesheet -->
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
 
-    <ul class="goals">
-      <li class="done">✅ Wake up at 6 AM</li>
-      <li class="done">✅ Study 2 hours without distraction</li>
-      <li class="pending">⬜ Complete coding practice</li>
-    </ul>
+  <body>
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <!-- round logo -->
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png.jpg" alt="DigiMitra logo" class="logo" />
+        </a>
 
-    <p class="quote">"Push yourself, because no one else is going to do it for you."</p>
+        <!-- title + slogan -->
+        <div class="nav-branding">
+          <a href="index.html" class="site-title"><h1>DigiMitra</h1></a>
+          <span class="slogan">Panchayat's Digital Companion</span>
+        </div>
+      </div>
 
-    <a href="index.html" class="cta-button">Back to Home</a>
-  </div>
-</body>
+      <div class="nav-links">
+        <a href="login.html"  class="nav-button">Sign In</a>
+        <a href="signup.html" class="nav-button">Sign Up</a>
+      </div>
+    </nav>
 
+    <!-- ============ MAIN SECTION ============ -->
+    <section>
+      <div class="dashboard-container">
+        <header>
+          <h1>Panchayat Digital Notice Board</h1>
+          <p id="datetime"></p>
+        </header>
+
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search notices…"
+          />
+        </div>
+
+        <ul id="noticeList" class="notices">
+          <li>💡 Electricity maintenance scheduled for July 3 (10 AM – 2 PM)</li>
+          <li>📢 Health Camp organised on July 5 at Panchayat Bhavan</li>
+          <li>📄 New ration-card registrations open till July 15</li>
+          <li>🏫 Village-school admission starts from July 1</li>
+          <li>🌾 Farmers’ meeting on irrigation support, July 10</li>
+        </ul>
+
+        <a href="index.html" class="cta-button">Back to Home</a>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="digimitra-footer">
+      <div class="footer-wrapper">
+        <div class="footer-col">
+          <h2>DigiMitra</h2>
+          <p>
+            Your daily dose of discipline, direction, and digital growth —
+            built for creators and dreamers.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Motivation</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> work.sujalkumar@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Deoghar, Jharkhand</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Creators</h4>
+          <p>Built by <strong>404 Not Founders</strong></p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 DigiMitra | All rights reserved.
+      </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+  </body>
 </html>
